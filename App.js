@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import react from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { Header, createStackNavigator } from "@react-navigation/stack";
+import GetStarted from "./GetStarted"; //imports the GetStarted page
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+const navStack = createStackNavigator(); //creates a constant navStack which holds a new navigation component 
+
+/* Const app is the main app file. it does not hold any ui data but sets up and manages all the 
+routing that will happen during the duration that the app is in use*/
+
+const App = ()=>{
+  return(
+    <NavigationContainer>
+      <navStack.Navigator initialRouteName="Home"> 
+        <navStack.Screen name="Home" component = {GetStarted} options={{headerShown: false}}/> 
+      </navStack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+export default App;
