@@ -2,6 +2,8 @@ import react from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { Header, createStackNavigator } from "@react-navigation/stack";
 import GetStarted from "./GetStarted"; //imports the GetStarted page
+import Whatup from "./Whatup"; //imports the What's up page 
+
 
 const navStack = createStackNavigator(); //creates a constant navStack which holds a new navigation component 
 
@@ -13,6 +15,7 @@ const App = ()=>{
     <NavigationContainer>
       <navStack.Navigator initialRouteName="Home"> 
         <navStack.Screen name="Home" component = {GetStarted} options={{headerShown: false}}/> 
+        <navStack.Screen name="whatUp" component={Whatup} options={{headerShown: false}}/>
       </navStack.Navigator>
     </NavigationContainer>
   );

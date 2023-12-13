@@ -17,12 +17,38 @@ const commonStyles = StyleSheet.create({
         fontSize: 30,
         color: 'white',
         fontWeight: 'bold',
-        
+       
         
     },
-    largeTextContainer: {
+    largeTextContainer: { //apply this to the view that holds the largetext
         marginBottom: 650,
         margin: 10,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    imageContainer: {// this should be applied to the container that hold the logo image for the app.
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    bottom: 200,
+    left: 0,
+    right: 0,
+    },
+    ButtonContainer1: { // this should be applied to the container of a button
+        width: 300,
+        height: 50,
+        borderRadius: 100,
+        backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 50,
+    },
+    ButtonText: { // this should be applied to the text you want on a button with white text+
+        color: 'white',
+        fontSize: 20,
+        fontWeight: 'bold',
     }
 
 
