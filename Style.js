@@ -20,8 +20,16 @@ const commonStyles = StyleSheet.create({
        
         
     },
+    ReallyLargeText: {
+        fontSize: 50,
+        color: 'white',
+        fontWeight: 'bold',
+        alignSelf: 'center',
+
+
+    },
     largeTextContainer: { //apply this to the view that holds the largetext
-        marginBottom: 650,
+        marginBottom: 600,
         margin: 10,
         marginLeft: 20,
         marginRight: 20,
@@ -49,6 +57,36 @@ const commonStyles = StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
+    },
+    MidTextContainer: {
+       
+        
+        margin: 30,
+
+    },
+    MidText: {
+        fontSize: 20,
+        color: 'white',
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        marginTop: 20,
+
+    },
+    input: {
+        width: '100%', // Set width to 100%
+        borderWidth: 1,
+        borderColor: 'black',
+        backgroundColor: 'black',
+        
+        padding: 10,
+        fontSize: 16,
+        color: 'white',
+        position: 'absolute',
+        bottom: 550,
+        textAlign: 'center',
+        height: 70,
+       
+
     }
 
 
