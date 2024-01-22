@@ -19,7 +19,7 @@ About button: This button will take you to the credits page. */
 const GetStarted = ({ navigation }) =>{ // this takes care of the button logic 
     const onButton = ()=>{
         //nav 
-        navigation.navigate('whatUp');
+        navigation.navigate("What's up");
     };
 
     return(
