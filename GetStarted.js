@@ -26,7 +26,7 @@ const GetStarted = ({ navigation }) =>{ // this takes care of the button logic
        <View style={commonStyles.container}>
         <ImageBackground source={require('/home/danielthornton/GTV3/good-talk-bg-texture-charcoal.jpg')} style={commonStyles.background}>
             <View style={commonStyles.largeTextContainer}>
-            <Text style={commonStyles.largeText}>
+            <Text style={commonStyles.ReallyLargeText}>
                 Everyone needs to have a good talk sometimes. This simple process will help.
             </Text>
             

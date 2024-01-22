@@ -2,94 +2,79 @@
 import { StyleSheet } from "react-native";
 
 const commonStyles = StyleSheet.create({
-    container:{ // this is the style to be applied to every <View></View>
-        flex: 1,
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
-    background: { //this should be applied to every <ImageBackground></ImageBackground>
-        flex:1,
-        resizeMode: 'cover',
-        width: '100%',
-        height: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
+    background: { // This is the style to be applied to all the background elements
+      flex: 1,
+      resizeMode: 'cover',
+      width: '100%',
+      height: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
     },
-    largeText: { //This should be applied to every Text element that is the title of the given page
-        fontSize: 30,
-        color: 'white',
-        fontWeight: 'bold',
-       
-        
+    ReallyLargeText: { // This should be appplied to all headings
+      fontSize: 30,
+      
+      color: 'white',
+      fontWeight: 'bold',
+      marginBottom: 10,
+      
     },
-    ReallyLargeText: {
-        fontSize: 50,
-        color: 'white',
-        fontWeight: 'bold',
-        alignSelf: 'center',
-
-
+    largeTextContainer: { // container for ReallyLargeText and positions it at the top of the phone.
+      marginTop: 60,
+      marginLeft: 22,
+      marginRight: 22,
+      //marginBottom: 10,
+      alignItems: 'center',
     },
-    largeTextContainer: { //apply this to the view that holds the largetext
-        marginBottom: 600,
-        margin: 10,
-        marginLeft: 20,
-        marginRight: 20,
+    imageContainer: {
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      
     },
-    imageContainer: {// this should be applied to the container that hold the logo image for the app.
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-    top: 0,
-    bottom: 200,
-    left: 0,
-    right: 0,
+    ButtonContainer1: {
+      width: 300,
+      height: 50,
+      borderRadius: 100,
+      backgroundColor: 'blue',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginTop: 50,
     },
-    ButtonContainer1: { // this should be applied to the container of a button
-        width: 300,
-        height: 50,
-        borderRadius: 100,
-        backgroundColor: 'blue',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 50,
-    },
-    ButtonText: { // this should be applied to the text you want on a button with white text+
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-    },
-    MidTextContainer: {
-       
-        
-        margin: 30,
-
+    ButtonText: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: 'bold',
     },
     MidText: {
-        fontSize: 20,
-        color: 'white',
-        fontWeight: 'bold',
-        alignSelf: 'center',
-        marginTop: 20,
-
+      fontSize: 20,
+      color: 'white',
+      fontWeight: 'bold',
+      alignSelf: 'center',
+      //marginBottom: 10,
     },
-    input: {
-        width: '100%', // Set width to 100%
+    fullWidthInput: {
+        width: '100%',
         borderWidth: 1,
         borderColor: 'black',
         backgroundColor: 'black',
-        
         padding: 10,
         fontSize: 16,
         color: 'white',
-        position: 'absolute',
-        bottom: 550,
-        textAlign: 'center',
         height: 70,
-       
-
-    }
-
-
-});
-
-export default commonStyles;
+       // marginBottom: 20,
+    },
+    inputContainer: {
+      alignItems: 'center',
+      marginTop: 50,
+     
+    },
+  });
+  
+  export default commonStyles;
+  

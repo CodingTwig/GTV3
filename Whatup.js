@@ -1,68 +1,44 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,ImageBackground,Image,Alert,Button,TouchableOpacity, TextInput, Keyboard } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
+import { View, ImageBackground, Text, TextInput, TouchableOpacity } from 'react-native';
 import commonStyles from './Style';
-import { useState } from 'react';
 
+const Whatup = () => {
+  const [inputValue, setInputValue] = useState('');
 
-// This page asks the user a question that the user will respons to, then that data will be stored in a variable.
+  const handleInputChange = (text) => {
+    setInputValue(text);
+    console.log(text);
+  };
 
-
-const Whatup =() =>{
-
-
-        const [inputValue,setInputValue] = useState('');
-
-        const handleInputChange = (text)=>{
-            setInputValue(text);
-            console.log(text);
-            
-        };
-      
-    
-    return(
-        <View style={commonStyles.container}>
-          <ImageBackground source={require('/home/danielthornton/GTV3/good-talk-bg-texture-charcoal.jpg')} style={commonStyles.background}>
-            <View style={commonStyles.largeTextContainer}>
-                <Text style={commonStyles.ReallyLargeText}>
-                    What's up?
-                </Text>
-        
-             <Text style={commonStyles.MidText}>
-                    Wow, life is complicated sometimes. 
-                </Text>
-          
-            
-                <Text style={commonStyles.MidText}>
-                    What's going on in yours?
-                </Text>
-
-              
-
-             
-
-          
-          
-
-            </View>
-            <TextInput
-                multiline
-                numberOfLines={10}
-                onChangeText={handleInputChange}
-                value={inputValue}
-                placeholderTextColor={'gray'}
-                placeholder='Type it out, talk it out, or just think it out'
-                style={commonStyles.input}
-                returnKeyType='done'
-                blurOnSubmit
-                
-                
-                />
-
-            
-          </ImageBackground>
+  return (
+    <View style={commonStyles.container}>
+      <ImageBackground source={require('/home/danielthornton/GTV3/good-talk-bg-texture-charcoal.jpg')} style={commonStyles.background}>
+        <View style={commonStyles.largeTextContainer}>
+          <Text style={commonStyles.ReallyLargeText}>What's up?</Text>
+          <Text style={commonStyles.MidText}>Wow, life is complicated sometimes.</Text>
+          <Text style={commonStyles.MidText}>What's going on in yours?</Text>
+          <View style={commonStyles.inputContainer}>
+          <TextInput
+            multiline
+            numberOfLines={10}
+            onChangeText={handleInputChange}
+            value={inputValue}
+            placeholderTextColor={'gray'}
+            placeholder='Type it out, talk it out, or just think it out'
+            style={commonStyles.fullWidthInput}
+            returnKeyType='done'
+            blurOnSubmit
+          />
         </View>
-    );
+        </View>
+
+
+        <TouchableOpacity style={commonStyles.ButtonContainer1}>
+          <Text style={commonStyles.ButtonText}>Next</Text>
+        </TouchableOpacity>
+      </ImageBackground>
+    </View>
+  );
 };
 
-export default Whatup; 
+export default Whatup;
